@@ -10,8 +10,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color-1: #191913; 
+        --background-color-1: #111111; 
         --background-color-2: #000000; 
+        --background-color-3: #161616; 
         --background-selection: #ffffff;
         --text-selection: #000000;
         --border-color: #383838; 
@@ -48,6 +49,7 @@ body{
     border: 1px solid var(--border-color);
     gap: 10px;
     box-shadow: 0 10px 800px var(--shadow-color);
+    animation: rotate3D 5s infinite linear ; 
 }
 .objeto {
     background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
@@ -55,7 +57,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 1px var(--border-color) solid;
-    transition: transform 0.1s ease;
+    transition: transform 0.5s ease;
 }
 .objeto-a {
     flex-basis: 100%;
@@ -79,4 +81,14 @@ body{
 
 .objeto:hover {
     transform: scale(1.05);
+    background: linear-gradient(135deg, var(--background-color-2), var(--background-color-1));
 }
+
+/*@keyframes rotate3D {
+    0% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(0.6);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg) scale(0.6);
+    }
+}*/
